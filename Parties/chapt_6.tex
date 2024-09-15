@@ -1,0 +1,114 @@
+\subsection{Les formes de normalisation des données muséales en France et à l’étranger
+L’export Joconde : un format d'export spécifique aux musées français}
+
+\textbf{L’agrégation des données culturelles et la plateforme POP}\newline
+
+POP est une initiative du Ministère de la Culture qui vise à centraliser les données sur le patrimoine culturel français, en regroupant les informations provenant de différentes bases de données comme Joconde pour les musées. Celle-ci existe depuis 1975 et ses données ont été mises en ligne dans les années 90. POP aussi accès aux bases Palissy pour le patrimoine mobilier, Mérimé pour le patrimoine architectural, Enluminure pour les enluminures, et d’autres. \footcite{base_Joconde}
+
+POP permet de diffuser les données culturelles à l’échelle nationale, en offrant un point d’accès unique aux collections des musées, aux monuments historiques, et aux archives patrimoniales. Les musées peuvent ainsi publier leurs collections sur POP, en garantissant que les informations sont accessibles au grand public, aux chercheurs, et aux autres institutions culturelles.
+Ce portail permet de rendre visible des collections qui, autrement, resteraient confinées dans les bases de données internes des musées. Les petites institutions, qui n’ont pas toujours les moyens de diffuser leurs collections sur des plateformes propres, peuvent bénéficier de la visibilité offerte par POP. De plus, en centralisant les données, POP facilite les recherches transversales entre différentes collections, permettant aux utilisateurs de découvrir des liens entre des objets provenant de différents musées ou régions.
+Cependant, le succès de POP dépend de la qualité des données qui y sont agrégées. Pour que la plateforme soit pleinement efficace, il est crucial que les données soient bien structurées, complètes, et conformes aux standards. C’est pourquoi la normalisation des données reste un enjeu fondamental pour le bon fonctionnement de cette plateforme et pour garantir la pérennité des informations qu’elle contient.
+		
+
+\textbf{L’export Joconde}: un format d'export de données spécifique aux musées français
+En France, l’export Joconde représente une forme spécifique de normalisation des données muséales. Ce format est utilisé pour l’intégration des collections dans la base Joconde, le catalogue collectif des musées de France. Cependant, cette normalisation n’est pas appliquée de manière homogène à travers tous les musées, ce qui pose des défis en termes d’interopérabilité et de partage des données. Certains musées ont développé des solutions propres, ce qui complique la création d’un cadre normatif commun.\newline
+
+L'export Joconde est en fait de le format d'export qui sort de la base Joconde. Mais pour pouvoir l'intégrer et vois ses données diffusées sur POP, les musées doivent s'y conformer.\newline
+
+Il s'agit en fait d'une liste champs spécifique dont certains ont l'obligation d'être renseignés. Les données doivent être structurées selon ces champs. \footcite{muséofile} \footcite{base_Joconde} \footcite{Joconde}
+
+\begin{longtable}{|p{7cm}|p{5cm}|}
+\hline
+\textbf{Intitulé de champ Joconde} & \textbf{Étiquette de champ Joconde} \\
+\hline
+Référence & REF \\
+POP\_CONTIENT\_GEOLOCALISATION & disponible ou non
+\\
+POP\_COORDONNEES & base Muséofile\\
+Ancien dépôt & ADPT \\
+Appellation & APPL \\
+Ancienne appartenance & APTN \\
+Ancienne attribution & ATTR \\
+Auteur & AUTR \\
+Base concernée & BASE \\
+Bibliographie & BIBL \\
+Commentaires & COMM \\
+Présence d’image (s) oui/non & CONTIENT\_IMAGE \\
+Copyright de la notice & COPY \\
+Date d’acquisition & DACQ \\
+Date de dépôt & DDPT \\
+Découverte-collecte & DECV \\
+Dénomination & DENO \\
+Lieu de dépôt & DEPO \\
+Description & DESC \\
+Mesures & DIMS \\
+Date de mise à jour & DMAJ \\
+Date de création & DMIS \\
+Domaine & DOMN \\
+Département & DPT \\
+Date sujet représenté & DREP \\
+Ecole-pays & ECOL \\
+Époque & EPOQ \\
+État du bien & ETAT \\
+Exposition & EXPO \\
+Genèse & GENE \\
+Géographie historique & GEOHI \\
+Historique & HIST \\
+HISTORIQUE & Historique des interventions manuelle ou export de données
+\\
+IMAGE & oui ou non\\
+Inscription & INSC \\
+Numéro d’inventaire & INV \\
+Appellation musée de France & LABEL \\
+Lien base Arcade & LARC \\
+Lieux de création / utilisation & LIEUX \\
+Localisation & LOCA \\
+Pays Région Ville & LOCA2 \\
+Lien Vidéo & LVID \\
+Bien manquant & MANQUANT \\
+Commentaire & MANQUANT\_COM \\
+Millésime de création & MILL \\
+Millésime d’utilisation & MILU \\
+Lien commande photo & MSGCOM \\
+Code Museofile & MUSEO \\
+Nom officiel du musée & NOMOFF \\
+Onomastique & ONOM \\
+Précisions auteur & PAUT \\
+Précisions découverte/collecte & PDEC \\
+Période de l’original copié & PEOC \\
+Période de création & PERI \\
+Période d’utilisation & PERU \\
+Crédits photographiques & PHOT \\
+Précisions inscriptions & PINS \\
+Précisions lieux de création & PLIEUX \\
+Précisions sujet représenté & PREP \\
+Producteur de la donnée & PRODUCTEUR \\
+Précisions utilisation & PUTI \\
+Références Mémoire liées & REFMEM \\
+Références Mérimée liées & REFMER \\
+Référence MAJ & REFMIS \\
+Références Palissy liées & REFPAL \\
+Sujet représenté & REPR \\
+Lien INHA & RETIF \\
+Source représentation & SREP \\
+Statut juridique & STAT \\
+Matériaux-techniques & TECH \\
+Titre & TITR \\
+Utilisation & UTIL \\
+Ville & VILLE\_M \\
+Lien site associé & WWW \\
+\hline
+\end{longtable}
+
+\textbf{Les initiatives internationales} : un modèle à suivre ?\newline
+
+Dans les pays anglo-saxons, des standards comme le Dublin Core et le CIDOC CRM (Conceptual Reference Model) ont été largement adoptés pour la gestion des collections muséales. Le Dublin Core est un schéma de métadonnées utilisé pour décrire diverses ressources numériques, y compris les objets de musée. Il offre une flexibilité tout en assurant une structure commune, ce qui facilite l'échange d'informations entre institutions. \newline
+
+Le CIDOC CRM, quant à lui, est un modèle conceptuel qui permet de structurer et d’interconnecter des informations complexes sur le patrimoine culturel. Par exemple, ce modèle permet de relier des informations sur un même objet réparties entre plusieurs bases de données, facilitant ainsi les recherches et les études comparatives. Il s'agit d'une initiative inernationale qui devait permettre de pouvoir faire des liens entre des données du monde entier, mais comme nous l'avons évoqué plus tôt, son usage est loin d'être démocratisé.\newline
+
+\textbf{Vers une harmonisation internationale des pratiques ?}\newline
+L'adoption de ces standards à l’échelle internationale montre une tendance vers une harmonisation des pratiques de normalisation. Toutefois, des disparités persistent, en partie à cause des spécificités culturelles et institutionnelles de chaque pays. Par exemple, la France, avec son système d'export Joconde, illustre bien comment des pratiques nationales peuvent coexister avec des standards internationaux, tout en cherchant à les harmoniser progressivement. \newline
+
+La normalisation des données est un processus fondamental qui a évolué au fil du temps, des répertoires papier aux technologies numériques avancées. Dans le domaine des collections culturelles, cette normalisation a permis de structurer, d’organiser et de rendre accessible un vaste ensemble d’informations. Alors que les musées ont adopté ces pratiques plus tardivement que d’autres institutions culturelles comme les bibliothèques, ils jouent désormais un rôle central dans le développement de standards internationaux, avec des initiatives comme le LIDO ou le CIDOC CRM.\newline
+
+Les défis restent nombreux, notamment en ce qui concerne l'interopérabilité entre les différentes plateformes et la diversité des pratiques nationales. Toutefois, les progrès réalisés montrent une tendance vers une plus grande cohésion, facilitée par les avancées technologiques et les efforts concertés des institutions culturelles à travers le monde.
