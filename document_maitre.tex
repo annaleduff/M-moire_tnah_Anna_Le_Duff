@@ -1,0 +1,300 @@
+%Dernières modifications E. Rouquette (12/2023)
+
+%%%%%%%%%%%%%%%%%%%%%% PRÉAMBULE
+
+
+%%%%%%%%%%%%%% partie obligatoire du préambule
+\documentclass[a4paper,12pt,twoside]{book}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage[french]{babel}%on peut préciser d'autres langues.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PACKAGES UTILISÉS
+
+\usepackage{csquotes} % les guillemets français
+\usepackage{lettrine} %faire une lettrine (pas obligatoire)
+
+\usepackage[backend=biber,style=enc,sorting=nyt,maxbibnames=10]{biblatex}%charger le style de l'EnC (téléchargeable ici https://ctan.org/pkg/biblatex-enc)
+\addbibresource{./bibliographie.bib} %le fichier bibliograhique. Exemple de chemin à partir du dossier où se trouve le document maître:Exemple ./dossierA/fichier.bib
+%\defbibheading{}{\subsection*{}} Si l'on veut changer le titre de la/les bibliographie(s)
+
+
+%%%Faire un ou plusieurs index
+
+%\usepackage{imakeidx} %pour faire un ou plusieurs index
+%\makeindex %commande pour générer l'index
+
+
+%RAJOUTEZ ICI VOS PACKAGES
+\usepackage{longtable} % Pour les longs tableaux
+\usepackage{array}     % Pour une meilleure mise en forme des colonnes
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CONFIGURATION DE MISE EN PAGE
+
+%%%%%% Les compteurs (sections, subsections, etc)
+
+
+%%%%%% Les compteurs (sections, subsections, etc)
+\renewcommand{\thesection}{\Roman{section}.}%On ne fait apparaître que le numéro de la section
+\renewcommand{\thesubsection}{\arabic{subsection}.}%subsection en chiffres arabes
+\renewcommand{\thesubsubsection}{\alph{subsubsection}.}%subsubsection en lettres minuscules
+%Si l'on veut faire apparaître les subsubsection dans le table des matières (à commenter sinon)
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}  % La subsubsection (profondeur=3 dans la table des matières) apparait numérotée dans la TdM
+
+
+
+%%%%%  Configurer le document selon les normes de l'école
+
+\usepackage[margin=2.5cm]{geometry} %marges
+\usepackage{setspace} % espacement qui permet ensuite de définir un interligne
+\onehalfspacing % interligne de 1.5
+\setlength\parindent{1cm} % indentation des paragraphes à 1 cm
+
+%%%%% Mise en forme des headers (haut de page)
+
+\usepackage{fancyhdr} %package utilisé pour modifier les headers
+\pagestyle{fancy} %utiliser ses propres choix de mise en page et non ceux par défaut du package
+
+\setlength\headheight{16pt}%la hauteur des headers
+\renewcommand{\sectionmark}[1]{\markright{\small\textit{\thesection~\  #1}}}%Faire apparaître dans les headers les sections en  petit et en italiques
+\renewcommand{\sectionmark}[1]{}%Commenter la lign précédetne et mettre celle-ci pour ne pas avoir le titre des sections dans le header
+\renewcommand{\chaptermark}[1]{\markboth{\small\chaptername~\thechapter~--\ \textit{#1}}{}}%idem pour les chapitres
+%\renewcommand{\chaptermark}[1]{}%Commenter la ligne précédente et mettre celle-ci pour ne pas avoir le titre des chapitres  dans le header
+
+
+
+%indiquer des règles d'hyphénation pour des mots précis si besoin
+%\begin{hyphenrules}{french}
+%	\hyphenation{}
+%\end{hyphenrules}
+
+
+%%%%%%% Package hyperref
+% A mettre après les autres appels de packages car redéfinit certaines commandes).
+
+\usepackage[colorlinks=false, breaklinks=true, pdfusetitle, pdfsubject ={Mémoire HN}, pdfkeywords={les mots-clés}]{hyperref} %
+\usepackage[numbered]{bookmark}%va avec hyperref; marche mieux pour les signets. l'option numbered: les signets dans le pdf sont numérotés
+
+% Compléter pdfsubjet et pdfkeywords
+%Explication des options de hyperref (modifiables)
+% hyperindex=false
+% colorlinks=false: pour que le cadre des liens n'apparaisse pas à l'impression
+% breaklinks permet d'avoir des liens allant sur pusieurs lignes
+%pdfusetitle: utiliser \author et \title pour produire le nom et le titre du pdf
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% Package glossaries
+
+%Exception: il faut le charger APRÈS hyperref
+\usepackage[toc=true]{glossaries}
+\makeglossaries
+%avec TexStudio: F9 pour compiler le glossaire (s'il y a aussi un index)
+\loadglsentries{./glossaire.tex}
+
+%Structure d'une entrée de glossaire
+%\newglossaryentry{}{%
+%	name={},%
+%	description={}
+%}
+
+
+
+%%%%%%%%%%%%%%%%%% DÉFINITION DES COMMANDES ET ENVIRONNMENTS
+
+
+
+
+
+
+
+ %%%%%%%%%%%%%% INFORMATIONS POUR LA PAGE DE TITRE
+\author{Anna Le Duff- M2 TNAH}
+\title{Normaliser les données culturelles pour optimiser leur circulation :  l'utilisation du modèle LIDO.
+}
+
+%%%%%%%%%%%%%%%%%%%%%% DOCUMENT
+\begin{document}
+	\begin{titlepage}
+		\begin{center}
+			
+			\bigskip
+			
+			\begin{large}				
+				ÉCOLE NATIONALE DES CHARTES\\
+				UNIVERSITÉ PARIS, SCIENCES \& LETTRES
+			\end{large}
+			\begin{center}\rule{2cm}{0.02cm}\end{center}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\begin{Large}
+				\textbf{Anna Le Duff}\\
+			\end{Large}
+		%selon le cas
+			\begin{normalsize} \textit{licencié.e ès lettres}\\
+
+			\end{normalsize}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			
+			\begin{Huge}
+				\textbf{Normaliser les données culturelles pour optimiser leur circulation : }\\
+			\end{Huge}
+			\bigskip
+			\bigskip
+			\begin{LARGE}
+				\textbf{L'utilisation du modèle LIDO.}\\
+			\end{LARGE}
+			
+			\bigskip
+			\bigskip
+			\bigskip
+			\begin{large}
+			\end{large}
+			\vfill
+			
+			\begin{large}
+				Mémoire 
+				pour le diplôme de master \\
+				\enquote{Technologies numériques appliquées à l'histoire} \\
+				\bigskip
+				2024
+			\end{large}
+			
+		\end{center}
+	\end{titlepage}
+
+	\thispagestyle{empty}	
+	\cleardoublepage
+	
+\frontmatter
+
+	\chapter{Résumé}
+\medskip
+        \input{resume} \newline
+	
+	\textbf{Mots-clés:} Normalisation des données~; Interopérabilité~; Modèle LIDO~; Agrégation culturelle.\newline
+
+	\textbf{Informations bibliographiques:} Anna Le Duff, \textit{Normaliser les données culturelles pour optimiser leur circulation :  l'utilisation du modèle LIDO.}, mémoire de master \enquote{Technologies numériques appliquées à l'histoire}, dir. [Axel Roche Dioré], École nationale des chartes, 2024.
+
+		\newpage{\pagestyle{empty}\cleardoublepage}
+	
+	\chapter{Remerciements}
+	
+\lettrine{M}es remerciements vont tout d'abord à Marie Véronique Leroi et Thierry Bultingaire, sous la
+responsabilité de qui j’ai eu la chance d’effectuer mon stage au sein du Service du numérique du Ministère de la Culture. Merci pour leurs encouragements, leur bienveillance et leur confiance, qu'ils m'ont donné tout au long du stage mais aussi pendant la rédaction de ce mémoire. \newline
+
+Je tiens également à remercier toute l'équipe du DPNC, qui ont fait de mon stage une expérience inoubliable. Ainsi que Antoine Courtin et Gautier Poupeau, pour tout nos échanges.\newline
+
+Mes remerciements à Axel Roche-Dioré, mon tuteur pour ce
+mémoire, pour tout ses conseils.\newline
+
+Enfin, je remercie chaudement Mélina et Claire, pour leur relecture et leurs encouragements pendant les derniers jours.
+	\newpage{\pagestyle{empty}\cleardoublepage}
+	
+%%%%%%%%%%%% \bibliographie ici (normes de l'EnC)
+\printbibliography
+	
+\chapter{Introduction}	
+\input{Introduction}
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%%%%%%%%%%%%%Le corps du mémoire
+	\mainmatter
+%Trier par dossiers si besoin (front, main,annexes,), se crérer un docuemnt .tex par structure (section ou chapter selon la taille et la pertinence) Exemple de chemin à partir du dossier où se trouve le document maître: ./dossierA/fichier.tex
+
+	
+
+	\part{Histoire et enjeux de la normalisation des données culturelles}
+\input{partie_1/intro}
+\chapter{La normalisation des données.}
+\input{partie_1/chapt_1}
+\input{partie_1/chapt_2}
+\chapter{Les développements techniques à l’ère numérique.}
+\input{partie_1/chapt_3}
+\input{partie_1/chapt_4}
+\chapter{L’histoire de la normalisation des données dans les musées.}
+\input{partie_1/chapt_5}
+\input{partie_1/chapt_6}
+
+%Input: importer un fichier
+%\input{ma_section2}
+
+%etc
+%Ou bien: ne pas mettre chapter, et importer le chapitre complet:
+%\input{mon_chapitre_1.tex}
+%\input{mon_chapitre_2.tex}	
+%etc
+	
+	\part{Les Standards dans métiers, quels -sont-ils et pour quoi sont-t’ils utilisées, objectifs de l’agrégation.}
+ \chapter{Les Modèles de Données : MARC, EAD, et le Lien avec la diffusion.}
+ \input{partie_1/chapt_7}
+ \input{partie_1/chapt_8}
+ \chapter{ Les Autorités dans les Musées : Thésaurus et Autres Normes}
+ \input{partie_1/chapt_9}
+ \input{partie_1/chapt_10}
+ \chapter{Objectifs de l'Agrégation des Données dans les Musées}
+ \input{partie_1/chapt_11}
+ \input{partie_1/chapt_12}
+
+ \part{Un modèle de données qui repond à ces besoins 
+}
+ \chapter{Le modèle LIDO, un standard existant}
+ \input{partie_1/chapt_13}
+ \input{partie_1/chapt_14}
+ \chapter{Notre proposition basée sur le modèle LIDO}
+ \input{partie_1/chapt_15}
+ \input{partie_1/chapt_16}
+ \chapter{Les limites de nos propositions}
+ \input{partie_1/chapt_17}
+	%etc.
+	
+	
+	\chapter*{Conclusion}
+ \input{conclusion}
+        
+	\addcontentsline{toc}{chapter}{Conclusion}
+\newpage{\pagestyle{empty}\cleardoublepage}
+	
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+
+\appendix %Des appendices: tables figures, etc
+
+\chapter[Documentation du modèle LIDO-MC]{Documentation du modèle LIDO-MC}
+\begin{figure}[h!]
+	\centerline{\includegraphics[width=\textwidth]{medias/extrait_ODD.png}}
+	\caption{Extrait de l'ODD du modèle LIDO, Documetn complet à retrouver \href{https://github.com/annaleduff/Memoire_tnah_Anna_Le_Duff/tree/main/Annexes}{dans les annexes sur notre github}}
+\end{figure}
+
+
+
+\newpage{\pagestyle{empty}\cleardoublepage}
+
+%%%%%%%%%%%%%%%%%%
+
+\backmatter % glossaire, index, table des figures, table des matières.. (la bibliographie a déjà été appelée)
+
+%\printindex
+
+\printglossaries[title=Glossaire, style=long]
+%\listoftables
+%\listoffigures
+\tableofcontents
+\end{document}
